@@ -1,0 +1,7 @@
+FROM  172.16.0.154:5000/clustarai/tensorflow:1.3.1-gpu-gdr-protected-entry
+
+COPY /home/ubuntu/dockerfile/estimator_pip/tensorflow_estimator-1.13.0-py2.py3-none-any.whl /tmp/tensorflow_estimator-1.13.0-py2.py3-none-any.whl
+
+RUN pip install /tmp/tensorflow_estimator-1.13.0-py2.py3-none-any.whl -I
+
+RUN rm /tmp/tensorflow_estimator-1.13.0-py2.py3-none-any.whl
